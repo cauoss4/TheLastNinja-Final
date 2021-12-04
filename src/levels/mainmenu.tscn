@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/levels/Button.gd" type="Script" id=1]
+[ext_resource path="res://src/levels/ninjia.png" type="Texture" id=2]
+[ext_resource path="res://assets/163601696059745-removebg-preview.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1228.96, 9796.36 )
+
+[node name="ninjia" type="Sprite" parent="."]
+position = Vector2( -268.941, -9257.41 )
+scale = Vector2( 3.59148, 3.58919 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="163601696059745-removebg-preview" type="Sprite" parent="."]
+position = Vector2( 60.4077, -9591.26 )
+scale = Vector2( 1.99859, 2.13918 )
+texture = ExtResource( 3 )
+
+[node name="START" type="Button" parent="."]
+margin_left = 171.369
+margin_top = -9063.32
+margin_right = 183.369
+margin_bottom = -9043.32
+rect_scale = Vector2( 6.40645, 5.69345 )
+text = "START"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+reference_path = "res://src/levels/game.tscn"
+
+[node name="exit" type="Button" parent="."]
+margin_left = 175.859
+margin_top = -8924.13
+margin_right = 225.859
+margin_bottom = -8904.13
+rect_scale = Vector2( 6.40645, 5.69345 )
+text = "EXIT"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="START" to="START" method="_on_Button_pressed"]

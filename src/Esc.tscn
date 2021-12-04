@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/levels/UI.gd" type="Script" id=1]
+[ext_resource path="res://src/levels/HUD.gd" type="Script" id=2]
+[ext_resource path="res://test_assets/main_theme.tres" type="Theme" id=3]
+
+[sub_resource type="InputEventAction" id=76]
+action = "Esc"
+
+[sub_resource type="ShortCut" id=77]
+shortcut = SubResource( 76 )
+
+[node name="HUD2" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="MenuButton" type="MenuButton" parent="."]
+pause_mode = 2
+margin_left = 1845.0
+margin_top = 50.0
+margin_right = 1857.0
+margin_bottom = 70.0
+focus_mode = 2
+mouse_filter = 1
+shortcut_in_tooltip = false
+shortcut = SubResource( 77 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 3.0
+margin_right = 12.0002
+margin_bottom = 3.0
+rect_scale = Vector2( 0.989893, 1.00159 )
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+color = Color( 0, 0, 0, 0.105882 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Exit/CenterContainer"]
+margin_left = 838.0
+margin_top = 483.0
+margin_right = 1082.0
+margin_bottom = 597.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="Exit/CenterContainer/VBoxContainer"]
+margin_right = 244.0
+margin_bottom = 42.0
+text = "Resume"
+
+[node name="Quit" type="Button" parent="Exit/CenterContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 244.0
+margin_bottom = 114.0
+text = "Quit"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="visibility_changed" from="Exit" to="Exit" method="_on_Exit_visibility_changed"]
+[connection signal="pressed" from="Exit/CenterContainer/VBoxContainer/Resume" to="Exit" method="_on_Resume_pressed"]
+[connection signal="pressed" from="Exit/CenterContainer/VBoxContainer/Quit" to="Exit" method="_on_Quit_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ALTF4 Game Main Theme Music.mp3-1c4ef5fa3681ca5b6cc69255c562fb93.mp3str"
+
+[deps]
+
+source_file="res://src/ALTF4 Game Main Theme Music.mp3"
+dest_files=[ "res://.import/ALTF4 Game Main Theme Music.mp3-1c4ef5fa3681ca5b6cc69255c562fb93.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

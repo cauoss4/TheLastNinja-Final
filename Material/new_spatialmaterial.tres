@@ -1,0 +1,10 @@
+[gd_resource type="SpatialMaterial" load_steps=4 format=2]
+
+[ext_resource path="res://Material/MetalPlates010_1K-JPG/MetalPlates010_1K_Roughness.jpg" type="Texture" id=1]
+[ext_resource path="res://Material/MetalPlates010_1K-JPG/MetalPlates010_1K_Metalness.jpg" type="Texture" id=2]
+[ext_resource path="res://Material/MetalPlates010_1K-JPG/MetalPlates010_1K_Color.jpg" type="Texture" id=3]
+
+[resource]
+albedo_texture = ExtResource( 3 )
+metallic_texture = ExtResource( 2 )
+roughness_texture = ExtResource( 1 )
